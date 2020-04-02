@@ -1,34 +1,32 @@
-<!--
-The template defines the view of the component - what is actually rendered.
-In NativeScript applications the template is defined with XML using NativeScript UI elements.
-It is different from HTML. So instead of <input>, <span>, <div> etc. - we have <TextField>, <Label> and layouts.
-The important thing is that although the elements are different - all of the Angular’s template syntax works exactly the same.
-So you can still use template expressions, bindings, templates as well as all the built-in directives.
--->
+<BottomNavigation>
+    <TabStrip>
+        <TabStripItem class="navigation__item">
+            <!--
+                Note TabStripItem will only accept single Label and/or single Image elements that it
+                will "adopt"; any other layout elements you try to specify will be ignored
+            -->
+            <Label text="Home"></Label>
+            <Image src="font://&#xf015;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label text="Cart"></Label>
+            <Image src="font://&#xf07a;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label text="Checkout"></Label>
+            <Image src="font://&#xf155;" class="fas t-36"></Image>
+        </TabStripItem>
+    </TabStrip>
 
-<!--
-The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
-http://docs.nativescript.org/ui/action-bar
--->
-<ActionBar title="License Plate Store">
-</ActionBar>
+    <TabContentItem>
+        <ns-hello></ns-hello>
+    </TabContentItem>
 
-<!--
-The GridLayout arranges its child elements in a table structure of rows and columns.
-A cell can contain multiple child elements, they can span over multiple rows and columns,
-and even overlap each other. The GridLayout has one column and one row by default.
-You can learn more about NativeScript layouts at https://docs.nativescript.org/ui/layout-containers.
+    <TabContentItem>
+        <ns-cart-view></ns-cart-view>
+    </TabContentItem>
 
-These components make use of the NativeScript core theme, which styles them with element selectors.
-The theme also provides a set of helper class names such as p-20, h1, h2, and text-center to enhance styling.
-You can learn more about the NativeScript core theme at https://github.com/nativescript/theme
--->
-<GridLayout>
-    <ListView [items]="licensePlates">
-        <ng-template let-item="item">
-            <StackLayout>
-                <Label [text]="item.name"></Label>
-            </StackLayout>
-        </ng-template>
-    </ListView>
-</GridLayout>
+    <TabContentItem>
+
+    </TabContentItem>
+</BottomNavigation>
