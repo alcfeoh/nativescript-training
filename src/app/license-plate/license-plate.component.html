@@ -5,7 +5,7 @@
         <Label [text]="plate.description" class="item-desc" textWrap="true"></Label>
         <FlexboxLayout>
             <Label text="$ {{ plate.price }}" class="item-price" flexGrow="1"></Label>
-            <Button [text]="buttonText"></Button>
+            <Button [text]="buttonText" (tap)="addToCart()"></Button>
         </FlexboxLayout>
     </StackLayout>
 </StackLayout>

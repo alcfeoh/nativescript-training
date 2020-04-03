@@ -1,5 +1,6 @@
 import {Component, Input} from "@angular/core";
 import {LicensePlate} from "~/app/license-plate";
+import { alert } from "tns-core-modules/ui/dialogs";
 
 @Component({
     selector: "ns-license-plate",
@@ -14,7 +15,12 @@ export class LicensePlateComponent {
     @Input()
     buttonText: string;
 
-    showDetails = false;
-
-    constructor() { }
+    addToCart() {
+        let options = {
+            title: "Plate added to cart",
+            message: "Thanks for shopping with us",
+            okButtonText: "OK"
+        };
+        alert(options);
+    }
 }
