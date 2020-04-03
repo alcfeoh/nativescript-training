@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import {LicensePlateComponent} from "~/app/license-plate/license-plate.component";
 import { HelloComponent } from './hello/hello.component';
 import { CartViewComponent } from './cart-view/cart-view.component';
+import { StoreViewComponent } from './store-view/store-view.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -25,7 +26,8 @@ import { CartViewComponent } from './cart-view/cart-view.component';
         AppComponent,
         LicensePlateComponent,
         HelloComponent,
-        CartViewComponent
+        CartViewComponent,
+        StoreViewComponent
     ],
     providers: [],
     schemas: [

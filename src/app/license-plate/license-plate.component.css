@@ -13,17 +13,20 @@
     font-family: 'Open Sans', 'OpenSans-Bold';
     font-weight: bold;
     font-size: 20px;
+    padding: 50px;
 }
 
 .item-desc {
     color: #303c47;
     font-family: 'Open Sans', 'OpenSans-Regular';
+    padding: 20px;
 }
 
 .item-price {
     font-family: 'Open Sans', 'OpenSans-Bold';
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
+    margin: 20px;
 }
 
 Button {
@@ -31,4 +34,6 @@ Button {
     padding: 40px;
     background-color: steelblue;
     color: white;
+    font-size: 20px;
+    font-weight: bold;
 }

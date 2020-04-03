@@ -38,3 +38,12 @@ Button.-primary {
     font-family: "Font Awesome 5 Free", "fa-regular-400";
     font-weight: 400;
 }
+
+.top-label {
+    margin-top: 80px;
+    padding: 30px 50px;
+    height: 200px;
+    background-color: #343a40;
+    color: white;
+    font-size: 25px;
+}
