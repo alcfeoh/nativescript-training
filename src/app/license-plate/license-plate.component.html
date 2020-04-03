@@ -2,7 +2,7 @@
     <StackLayout orientation="horizontal">
         <Label [text]="plate.title" class="item-name"></Label>
         <Image src="https://store.angulartraining.com/assets/sale.png"
-               *ngIf="plate.onSale" width="120px"></Image>
+               *ngIf="plate?.onSale" width="120px"></Image>
     </StackLayout>
     <Image [src]="plate.picture" width="90%"></Image>
     <StackLayout>

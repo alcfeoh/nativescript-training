@@ -8,6 +8,9 @@
       "version": "6.5.0"
     }
   },
+  "scripts": {
+    "server": "node node_modules/lp-store-server/index.js"
+  },
   "description": "NativeScript Application",
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
@@ -21,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
     "@nativescript/theme": "~2.3.3",
+    "lp-store-server": "^2.2.0",
     "nativescript-angular": "~8.21.0",
     "reflect-metadata": "~0.1.12",
     "rxjs": "^6.4.0",
