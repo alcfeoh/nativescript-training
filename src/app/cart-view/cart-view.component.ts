@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {LICENSE_PLATES} from "~/app/mock-data";
 
 @Component({
   selector: 'ns-cart-view',
@@ -8,7 +7,6 @@ import {LICENSE_PLATES} from "~/app/mock-data";
 })
 export class CartViewComponent implements OnInit {
 
-    items = LICENSE_PLATES;
 
   constructor() { }
 

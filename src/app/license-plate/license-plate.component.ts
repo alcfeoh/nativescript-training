@@ -1,10 +1,10 @@
 import {Component, Input} from "@angular/core";
 import {LicensePlate} from "~/app/license-plate";
 
-
 @Component({
     selector: "ns-license-plate",
-    templateUrl: "./license-plate.component.html"
+    templateUrl: "./license-plate.component.html",
+    styleUrls: ["./license-plate.component.css"]
 })
 export class LicensePlateComponent {
 
@@ -13,6 +13,8 @@ export class LicensePlateComponent {
 
     @Input()
     buttonText: string;
+
+    showDetails = false;
 
     constructor() { }
 }

@@ -19,7 +19,15 @@
     </TabStrip>
 
     <TabContentItem>
-        <ns-hello></ns-hello>
+        <Label text="Label"></Label>
+        <GridLayout>
+            <ListView [items]="licensePlates">
+                <ng-template let-plate="item">
+                    <ns-license-plate [plate]="plate" buttonText="Add to cart"></ns-license-plate>
+                </ng-template>
+            </ListView>
+        </GridLayout>
+
     </TabContentItem>
 
     <TabContentItem>
