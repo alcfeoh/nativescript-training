@@ -1,6 +1,13 @@
-<FlexboxLayout flexDirection="column">
-    <FlexboxLayout class="m-15">
-        <Label class="h2" [text]="plate.title"></Label>
-    </FlexboxLayout>
-    <Label class="h4 m-15" [text]="plate.price"></Label>
-</FlexboxLayout>
+<StackLayout margin="10" borderRadius="10" backgroundColor="#dcdcdc">
+    <StackLayout orientation="horizontal">
+        <Label [text]="plate.title" class="item-name"></Label>
+    </StackLayout>
+    <Image [src]="plate.picture" width="90%"></Image>
+    <StackLayout>
+        <Label [text]="plate.description" class="item-desc" textWrap="true"></Label>
+        <FlexboxLayout>
+            <Label text="$ xx" class="item-price" flexGrow="1"></Label>
+            <Button [text]="buttonText"></Button>
+        </FlexboxLayout>
+    </StackLayout>
+</StackLayout>
