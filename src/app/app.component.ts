@@ -5,7 +5,7 @@ import {LicensePlate} from "~/app/license-plate";
 @Component({
     selector: "ns-app",
     template: `
-        <StackLayout>
+        <StackLayout style="padding: 100px;">
             <ns-hello></ns-hello>
         </StackLayout>
     `
