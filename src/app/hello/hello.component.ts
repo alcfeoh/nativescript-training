@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'ns-hello',
-  templateUrl: './hello.component.html',
-  styleUrls: ['./hello.component.css']
+  template:`
+      <Button text="Hello {{name}}!"></Button>
+  `
 })
-export class HelloComponent implements OnInit {
+export class HelloComponent {
 
-  constructor() { }
+    name: string;
 
-  ngOnInit(): void {
+  constructor() {
+      this.name = 'NativeScript';
   }
-
 }
