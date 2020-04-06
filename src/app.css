@@ -38,11 +38,7 @@ Button.-primary {
     font-weight: 400;
 }
 
-.top-label {
-    margin-top: 80px;
-    padding: 30px 50px;
-    height: 200px;
+ActionBar {
     background-color: #343a40;
     color: white;
-    font-size: 25px;
 }
