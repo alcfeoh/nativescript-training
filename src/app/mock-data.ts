@@ -17,7 +17,7 @@ export const LICENSE_PLATES: LicensePlate[] = [
         "onSale": true,
         "picture": "https://angulartraining.com/plates/NJ.jpg",
         "title": "2015 New Jersey license plate",
-        "price": 11,
+        "price": 11.00,
         "year": 2015,
         "state": "NJ",
         "description": "A beautiful license plate from the Garden State. Year is 2015. \r\n"
@@ -37,7 +37,7 @@ export const LICENSE_PLATES: LicensePlate[] = [
         "onSale": true,
         "picture": "https://angulartraining.com/plates/CO.jpg",
         "title": "2010 Colorado license plate",
-        "price": 5,
+        "price": 5.622,
         "year": 2010,
         "state": "CO",
         "description": "Labore ea eu labore voluptate velit elit aute est velit consequat fugiat labore esse adipisicing. Laboris eiusmod eiusmod veniam cillum velit consectetur dolore cillum eiusmod qui ipsum. Consequat ullamco voluptate commodo aliquip elit dolor incididunt proident nostrud pariatur cillum excepteur Lorem adipisicing.\r\n"
