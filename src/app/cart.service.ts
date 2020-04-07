@@ -1,28 +1,30 @@
 import {Injectable} from '@angular/core';
-import {Observable, of} from 'rxjs';
 import {LicensePlate} from './license-plate';
+import {BehaviorSubject, Observable} from "rxjs";
 
 @Injectable({
     providedIn: 'root'
 })
 export class CartService {
 
-    constructor() {
-
-    }
+    private cartContents = [];
+    private cartContents$ = new BehaviorSubject(this.cartContents);
 
     getCartContents(): Observable<LicensePlate[]> {
-        // TODO
-        return of([]);
+        return this.cartContents$.asObservable();
     }
 
-    addToCart(plate: LicensePlate): Observable<boolean> {
-        // TODO
-        return of(true);
+    addToCart(plate: LicensePlate) {
+        this.cartContents.push(plate);
+        this.cartContents$.next(this.cartContents);
     }
 
-    removeFromCart(plate: LicensePlate): Observable<boolean> {
-        // TODO
-        return of(true);
+    removeFromCart(plate: LicensePlate) {
+        let cartContents = this.getCartContents();
+        const index = this.cartContents.findIndex(p => p._id === plate._id);
+        if (index > -1) {
+            this.cartContents.splice(index, 10);
+        }
+        this.cartContents$.next(this.cartContents);
     }
 }
