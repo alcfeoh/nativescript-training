@@ -12,6 +12,9 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
+import { LoginComponent } from './login/login.component';
+import { CheckoutViewComponent } from './checkout-view/checkout-view.component';
+
 @NgModule({
     bootstrap: [
         AppComponent
@@ -25,7 +28,9 @@ import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
     declarations: [
         AppComponent,
         LicensePlateComponent,
-        HelloComponent
+        HelloComponent,
+        LoginComponent,
+        CheckoutViewComponent
     ],
     providers: [],
     schemas: [
