@@ -1,25 +1,28 @@
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {LicensePlate} from './license-plate';
-import {HttpClient} from '@angular/common/http';
 
 @Injectable({
     providedIn: 'root'
 })
 export class CartService {
 
-    constructor(private http: HttpClient) { }
+    constructor() {
+
+    }
 
     getCartContents(): Observable<LicensePlate[]> {
-        return this.http.get<LicensePlate[]>('https://lp-store.herokuapp.com/cart');
+        // TODO
+        return of([]);
     }
 
-    addToCart(plate: LicensePlate) {
-        // TODO 
+    addToCart(plate: LicensePlate): Observable<boolean> {
+        // TODO
+        return of(true);
     }
 
-    removeFromCart(plate: LicensePlate) {
-        return this.http.delete('https://lp-store.herokuapp.com/cart/' + plate._id);
+    removeFromCart(plate: LicensePlate): Observable<boolean> {
+        // TODO
+        return of(true);
     }
-
 }
