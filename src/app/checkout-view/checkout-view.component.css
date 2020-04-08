@@ -1,1 +1,8 @@
-/* Add mobile styles for the component here.  */
+.ng-invalid {
+    border-bottom-color: #ff7178;
+    border-bottom-width: 2;
+}
+
+TextField {
+    margin: 50px;
+}
