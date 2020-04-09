@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './checkout-view.component.html',
   styleUrls: ['./checkout-view.component.css']
 })
-export class CheckoutViewComponent implements OnInit {
+export class CheckoutViewComponent  {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  submit(formValue: any) {
+      console.log('FORM SUBMITTED:', formValue);
   }
 
 }

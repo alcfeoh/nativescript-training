@@ -1,6 +1,9 @@
-<StackLayout class="form">
-    <TextField class="input" hint="First name" required ngModel></TextField>
-    <TextField class="input" hint="Last name" ngModel></TextField>
-    <TextField class="input" hint="Address" ngModel></TextField>
-    <Button text="Submit" class="btn btn-primary" ></Button>
+<StackLayout class="form" ngForm #form="ngForm">
+    <TextField hint="First name" name="firstName" required ngModel></TextField>
+    <TextField hint="Last name" name="lastName" ngModel></TextField>
+    <TextField hint="Address" name="address" ngModel></TextField>
+    <TextField hint="Zip code" name="zip" ngModel></TextField>
+    <TextField hint="State" name="state" ngModel></TextField>
+    <TextField hint="Credit card number" secure="true" name="cc" ngModel></TextField>
+    <Button text="Submit" class="btn btn-primary" (tap)="submit(form.value)"></Button>
 </StackLayout>
