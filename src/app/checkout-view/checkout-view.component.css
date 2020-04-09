@@ -2,6 +2,6 @@ TextField.ng-invalid {
     background-color: #ffe0d5;
 }
 
-TextField {
-    margin: 50px;
+TextField, Label {
+    margin-left: 50px;
 }
