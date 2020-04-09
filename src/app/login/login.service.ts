@@ -21,6 +21,7 @@ export class LoginService {
                     this.currentUser = username;
                     this.isLoggedIn = true;
                     this.authToken = data['token'];
+                    console.log("AUTH SUCCESSFUL");
                 }),
                 map(tokenObj => tokenObj['token'])
             );

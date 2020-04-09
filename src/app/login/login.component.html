@@ -7,5 +7,6 @@
         <TextField class="input" hint="Password" secure="true" #password></TextField>
     </StackLayout>
 
-    <Button text="Log In" class="btn btn-primary"></Button>
+    <Button text="Log In" class="btn btn-primary" (tap)="login(username.text, password.text)"></Button>
+
 </StackLayout>

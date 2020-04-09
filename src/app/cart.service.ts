@@ -7,6 +7,8 @@ import {BehaviorSubject, Observable} from "rxjs";
 })
 export class CartService {
 
+
+
     private cartContents = [];
     private cartContents$ = new BehaviorSubject(this.cartContents);
 

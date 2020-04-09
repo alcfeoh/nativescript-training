@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, EventEmitter, Input, Output, SimpleChanges} from "@angular/core";
 import {LicensePlate} from "~/app/license-plate";
 
 
@@ -15,5 +15,12 @@ export class LicensePlateComponent {
     @Input()
     buttonText: string;
 
+    @Output()
+    buttonClick = new EventEmitter<LicensePlate>();
+
     constructor() { }
+
+    buttonClicked() {
+        this.buttonClick.emit(this.plate);
+    }
 }

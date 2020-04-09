@@ -5,15 +5,17 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import {LicensePlateComponent} from "~/app/license-plate/license-plate.component";
 import { HelloComponent } from './hello/hello.component';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
-
+import { CartViewComponent } from './cart-view/cart-view.component';
 import { LoginComponent } from './login/login.component';
 import { CheckoutViewComponent } from './checkout-view/checkout-view.component';
+import {CreditCardValidatorDirective} from "~/app/checkout-view/credit-card-validator.directive";
 
 @NgModule({
     bootstrap: [
@@ -29,8 +31,11 @@ import { CheckoutViewComponent } from './checkout-view/checkout-view.component';
         AppComponent,
         LicensePlateComponent,
         HelloComponent,
+        JumbotronComponent,
+        CartViewComponent,
         LoginComponent,
-        CheckoutViewComponent
+        CheckoutViewComponent,
+        CreditCardValidatorDirective
     ],
     providers: [],
     schemas: [

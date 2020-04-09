@@ -2,8 +2,11 @@
     <TextField hint="First name" name="firstName" required ngModel></TextField>
     <TextField hint="Last name" name="lastName" ngModel></TextField>
     <TextField hint="Address" name="address" ngModel></TextField>
-    <TextField hint="Zip code" name="zip" ngModel></TextField>
+    <TextField hint="Zip code" name="zip" ngModel required pattern="[0-9]{5}" #zip="ngModel" ></TextField>
+    <Label *ngIf="zip.invalid && zip.dirty" text="Please enter a 5-digit zipcode" color="red"></Label>
     <TextField hint="State" name="state" ngModel></TextField>
-    <TextField hint="Credit card number" secure="true" name="cc" ngModel></TextField>
-    <Button text="Submit" class="btn btn-primary" (tap)="submit(form.value)"></Button>
+    <Label *ngIf="cc.invalid" [text]="cc.errors?.creditCard" color="red"></Label>
+    <TextField hint="Credit card number" secure="true" name="cc" ngModel #cc="ngModel" creditCardValidator></TextField>
+
+    <Button text="Submit" class="btn btn-primary" *ngIf="form.valid" (tap)="submit(form.value)"></Button>
 </StackLayout>

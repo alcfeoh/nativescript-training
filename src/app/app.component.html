@@ -13,7 +13,7 @@ So you can still use template expressions, bindings, templates as well as all th
             <Image src="font://&#xf015;" class="fas t-36"></Image>
         </TabStripItem>
         <TabStripItem>
-            <Label text="Cart"></Label>
+            <Label text="Cart ({{(cartContents$ | async).length}})"></Label>
             <Image src="font://&#xf07a;" class="fas t-36"></Image>
         </TabStripItem>
         <TabStripItem>
@@ -26,6 +26,16 @@ So you can still use template expressions, bindings, templates as well as all th
         <!-- This is the content of the first tab (Home) -->
         <StackLayout>
             <!-- TODO Add first jumbotron here -->
+            <ns-jumbotron title="Welcome to our store" description="Browse our collection of license plates"></ns-jumbotron>
+            <ScrollView orientation="vertical" row="1">
+                <StackLayout>
+                    <ns-license-plate *ngFor="let myPlate of licensePlates$ | async"
+                                      [plate]="myPlate" buttonText="Add to cart"
+                                      (buttonClick)="addToCart($event)">
+
+                    </ns-license-plate>
+                </StackLayout>
+            </ScrollView>
             <!-- TODO Add license plate component here -->
         </StackLayout>
 
@@ -33,9 +43,17 @@ So you can still use template expressions, bindings, templates as well as all th
 
      <TabContentItem>
          <!-- This is the content of the second tab (Cart) -->
+         <StackLayout>
+            <ns-jumbotron title="Cart" description="Your cart contents"></ns-jumbotron>
+             <ns-cart-view></ns-cart-view>
+         </StackLayout>
      </TabContentItem>
 
      <TabContentItem>
          <!-- This is the content of the third tab (Checkout) -->
+         <StackLayout>
+            <ns-jumbotron title="Checkout" description="Complete your order"></ns-jumbotron>
+             <router-outlet></router-outlet>
+         </StackLayout>
      </TabContentItem>
  </BottomNavigation>

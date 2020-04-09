@@ -1,12 +1,14 @@
 import { NgModule } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
-import {HelloComponent} from "~/app/hello/hello.component";
-
+import {LoginComponent} from "~/app/login/login.component";
+import {CheckoutViewComponent} from "~/app/checkout-view/checkout-view.component";
+import {AuthGuard} from "~/app/login/auth-guard.service";
 
 
 const routes: Routes = [
-    { path: "", component: HelloComponent },
+    { path: "", component: LoginComponent },
+    { path: "checkout", component: CheckoutViewComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
