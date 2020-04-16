@@ -23,7 +23,7 @@ export class CartService {
         let cartContents = this.getCartContents();
         const index = this.cartContents.findIndex(p => p._id === plate._id);
         if (index > -1) {
-            this.cartContents.splice(index, 10);
+            this.cartContents.splice(index, 1);
         }
         this.cartContents$.next(this.cartContents);
     }
