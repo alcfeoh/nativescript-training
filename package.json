@@ -31,7 +31,7 @@
     "@angular/cli": "^9.1.0",
     "@angular/compiler-cli": "~8.2.0",
     "@nativescript/schematics": "^1.0.0",
-    "@ngtools/webpack": "~8.2.0",
+    "@ngtools/webpack": "~8.3.29",
     "@types/jasmine": "^3.5.10",
     "nativescript-dev-webpack": "~1.5.1",
     "typescript": "~3.5.3"
